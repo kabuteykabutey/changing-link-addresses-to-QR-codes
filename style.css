@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e9c9eb;
+    perspective: 1000px;
+    margin: 0;
+}
+
+#qrcode {
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 
+        0 0 0 1px rgba(255, 36, 244, 0.1),
+        0 20px 50px rgba(68, 11, 70, 0.5), 
+        5px 5px 0px rgba(0,0,0,0.2); 
+    transform: rotateX(10deg) rotateY(-10deg);
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+}
+
+#qrcode:hover {
+    transform: rotateX(0deg) rotateY(0deg) scale(1.05);
+    box-shadow: 
+        0 10px 30px rgba(0,0,0,0.3);
+}
+
+#qrcode img {
+    display: block; 
+}
